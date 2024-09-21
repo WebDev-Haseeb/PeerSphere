@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeerSphere - Subjects</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="icon" href="./assets/favIcon.svg">
+
+    <!-- CSS Styling Files -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styling/footer.css">
+    <link rel="stylesheet" href="./styling/subjects.css">
+</head>
+
+<body class="dark-mode">
+    <div id="background"></div>
+    <div id="top" onclick="window.scrollTo(0,0)"><i class="fas fa-arrow-circle-up"></i></div>
+
+    <header>
+        <nav>
+            <div class="logo"><a href="./index.html">PeerSphere</a></div>
+
+            <ul class="nav-links">
+                <li><a href="./index.html" class="nav-item">Home</a></li>
+                <li><a href="./about.html" class="nav-item">About</a></li>
+                <li><a href="./subjects.html" class="nav-item active">Subjects</a></li>
+                <li><a href="#" class="nav-item">Upload</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <a href="./auth.html"><button class="login-btn">Login</button></a>
+                <a href="./auth.html"><button class="signup-btn">Sign Up</button></a>
+                <button id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+
+            <button class="hamburger" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="subjects-hero">
+            <h1>Explore <span>Subjects</span></h1>
+            <p>Discover a wealth of knowledge across various disciplines</p>
+        </section>
+
+        <section class="subjects-grid">
+            <div class="container">
+                <div class="subject-cards">
+                    <!-- Subject cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="subject-details" id="subjectDetails">
+            <div class="container">
+                <button class="close-details" id="closeDetails">&times;</button>
+                <h2 id="subjectTitle"></h2>
+                <p id="subjectDescription"></p>
+                <div class="subject-stats">
+                    <div class="stat">
+                        <i class="fas fa-file-alt"></i>
+                        <span id="resourceCount"></span> Resources
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <span id="contributorCount"></span> Contributors
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-star"></i>
+                        <span id="rating"></span> Average Rating
+                    </div>
+                </div>
+                <a href="#" class="explore-btn">Explore Resources</a>
+            </div>
+        </section>
+    </main>
+
+        <!-- *Footer Section  -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3 class="footer-title">About PeerSphere</h3>
+                    <p>PeerSphere is a dynamic, student-centric platform revolutionizing the way learners collaborate
+                        and share knowledge. It serves as a virtual hub where students from diverse backgrounds can
+                        upload, discover, and exchange a wide array of academic resources.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section feedback">
+                    <h3 class="footer-title">Suggestions & Feedback</h3>
+                    <form id="feedback-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="submit-btn">Send</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;2024 PeerSphere. All rights reserved.</p>
+            </div>
+        </footer>
+    
+        <!-- Feedback Submission Message -->
+        <div id="feedback-message" class="feedback-message">
+            <div class="feedback-message-content">
+                <i class="fas fa-check-circle"></i>
+                <p>Thank you for your feedback!</p>
+            </div>
+        </div>
+    
+        <!-- For Hamburger Menu. -->
+        <div class="mobile-nav">
+            <div class="mobile-nav-header">
+                <div class="logo">PeerSphere</div>
+                <button class="close-btn" aria-label="Close mobile menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-nav-links">
+                <li><a href="./index.html" class="nav-item">Home</a></li>
+                <li><a href="./about.html" class="nav-item">About</a></li>
+                <li><a href="./subjects.html" class="nav-item">Subjects</a></li>
+                <li><a href="#" class="nav-item">Upload</a></li>
+            </ul>
+            <div class="mobile-nav-buttons">
+                <a href="./auth.html"><button class="login-btn">Login</button></a>
+                <a href="./auth.html"><button class="signup-btn">Sign Up</button></a>
+                <button id="mobile-theme-toggle" aria-label="Toggle dark/light mode">
+                    <i id="ham-icon" class="fas fa-sun"></i>
+                </button>
+            </div>
+        </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="./footer.js"></script>
+    <script src="./subjects.js"></script>
+</body>
+
+</html>
