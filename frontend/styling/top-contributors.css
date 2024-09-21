@@ -41,7 +41,7 @@
 }
 
 .light-mode .contributor-card {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0.05);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -57,12 +57,9 @@
     transition: transform 0.5s ease;
 }
 
-.contributor-card:hover::before {
-    transform: rotate(45deg) translate(50%, 50%);
-}
-
 .contributor-card:hover {
-    transform: translateY(-10px) scale(1.02);
+    background-color: rgba(0, 0, 0, 0.01) !important;
+    transform: translateY(-10px);
 }
 
 .contributor-rank {
