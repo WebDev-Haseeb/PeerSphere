@@ -18,6 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Check for tab query parameter and switch tab if present
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get('tab');
+    if (tabParam) {
+        const targetTab = document.querySelector(`.auth-tab[data-tab="${tabParam}"]`);
+        if (targetTab) {
+            targetTab.click();
+        }
+    }
+
     // Toggle password visibility
     togglePasswordBtns.forEach(btn => {
         btn.addEventListener('click', () => {
